@@ -1,19 +1,35 @@
-#include <bits/stdc++.h>
-
+#include<iostream>
+#include<queue>
+#include<algorithm>
 using namespace std;
-
-int main()
-{
-   int n;
-   cin>>n;
-   int a[n+2];
-   for(int i=1;i<=n;i++){
-    cin>>a[i];
-   }
-   sort(a+1,a+n+1);
-   for(int i=1;i<=n;i++){
-        int l=i,
-        int r=i-1;
-        long long C=
-   }
+void print(queue<int>q) {
+	
+}
+int main() {
+	queue<int>q;
+	int n;
+	scanf("%d",&n);
+	while (n--) {
+		int x, y;
+		scanf("%d",&x);
+		if (x == 1) {
+			scanf("%d",&y);
+			q.push(y);
+		}
+		else if (x == 2) {
+			if (!q.empty()) {
+				q.pop();
+			}
+		}
+		else {
+			if (!q.empty()) {
+				int z = q.front();
+				printf("%d\n",z);
+			}
+			else {
+				
+					printf("Empty!\n");
+			}
+		}
+	}
 }
